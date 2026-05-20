@@ -22,12 +22,12 @@ import mongoose from "mongoose";
 
 const connectDB = async (): Promise<void> => {
   try {
-    const mongoUri = process.env.MONGO_URI;
+    const mongoUri = process.env.mongo_url;
     //const mongoUri ="mongodb+srv://KVR-Flight-Restaurant:kvr123@cluster0.6ghcbs5.mongodb.net/?appName=Cluster0";
 
     if (!mongoUri) {
       throw new Error(
-        "MONGO_URI missing in .env"
+        "MONGO_URL missing in .env"
       );
     }
 
